@@ -5,7 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamshed Ali - DevOps Engineer</title>
+    <meta name="robots" content="noindex, nofollow">
     <style>
+        /* Hide GitHub Pages elements */
+        .github-corner,
+        .github-fork-ribbon,
+        .github-fork-ribbon-wrapper,
+        .github-banner,
+        .repository-banner,
+        .github-pages-banner,
+        a[href*="github.com/fork"],
+        img[alt="Fork me on GitHub"],
+        img[src*="github-corner"],
+        img[src*="forkme"],
+        .octicon-mark-github,
+        .github-ribbon {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+        
+        /* Hide any GitHub watermarks or ribbons */
+        body::before,
+        body::after,
+        html::before,
+        html::after {
+            content: none !important;
+        }
+        
+        /* Remove any GitHub injected styles */
+        .github-pages-site-header {
+            display: none !important;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -32,30 +65,29 @@
             background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
             padding: 40px;
-            text-align: center;
             position: relative;
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .header-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+            max-width: 100%;
+        }
+        
+        .header-left {
+            text-align: center;
         }
         
         .profile-pic {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 4px solid white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             object-fit: cover;
-            z-index: 10;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 5;
         }
         
         .name {
@@ -285,17 +317,16 @@
         }
         
         @media (max-width: 768px) {
-            .profile-pic {
-                position: static;
-                margin: 0 auto 20px;
-                display: block;
-                width: 80px;
-                height: 80px;
+            .header-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
             }
             
-            .header {
-                min-height: auto;
-                padding: 30px 20px;
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
             }
             
             .contact-info {
@@ -325,27 +356,31 @@
 <body>
     <div class="resume-container">
         <div class="header">
-            <img src="./profile.jpg" alt="Jamshed Ali" class="profile-pic">
-            <div class="header-content">
-                <h1 class="name">JAMSHED ALI</h1>
-                <p class="title">DevOps Engineer</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:jamshedqamar20@gmail.com" style="color: inherit; text-decoration: none;">jamshedqamar20@gmail.com</a>
+            <div class="header-grid">
+                <div class="header-left">
+                    <h1 class="name">JAMSHED ALI</h1>
+                    <p class="title">DevOps Engineer</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="mailto:jamshedqamar20@gmail.com" style="color: inherit; text-decoration: none;">jamshedqamar20@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>🔗</span>
+                            <a href="https://www.linkedin.com/in/jamshed-devops/" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/jamshed-devops</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>Pakistan</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>💼</span>
+                            <span>6+ Years Experience</span>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <span>🔗</span>
-                        <a href="https://www.linkedin.com/in/jamshed-devops/" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/jamshed-devops</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>Pakistan</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>💼</span>
-                        <span>6+ Years Experience</span>
-                    </div>
+                </div>
+                <div class="header-right">
+                    <img src="./profile.jpg" alt="Jamshed Ali" class="profile-pic">
                 </div>
             </div>
         </div>
